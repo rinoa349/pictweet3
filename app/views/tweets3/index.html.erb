@@ -1,0 +1,18 @@
+<div class="contents row">
+  <% @tweets3.each do |tweet3| %>
+    <div class="content_post" style="background-image: url(<%= tweet3.image %>);">
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '削除', "/tweets3/#{tweet3.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+      <p><%= tweet3.text %></p>
+      <span class="name">
+        <%= tweet3.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
